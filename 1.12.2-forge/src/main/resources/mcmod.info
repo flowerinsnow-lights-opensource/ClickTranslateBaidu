@@ -1,0 +1,16 @@
+[
+{
+  "modid": "clicktranslate",
+  "name": "Click Translate",
+  "description": "",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["flowerinsnow"],
+  "credits": "https://github.com/flowerinsnow-lights-opensource/ClickTranslate",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
