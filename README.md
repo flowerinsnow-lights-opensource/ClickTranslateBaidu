@@ -37,7 +37,7 @@
 1. 本项目需要您自己申请百度翻译API，一般只需要一个百度账号即可，请前往[百度翻译开放平台](https://fanyi-api.baidu.com/)申请，如有需要可以升级到更高版本
 2. 查看你的`APP ID`和`密钥`，它们在[开发者中心](https://fanyi-api.baidu.com/manage/developer)中
 3. 下载Mod文件到`mods`文件夹中，然后启动游戏
-4. 在游戏目录下，找到目录`config`，再找到里面的`clicktranslate.cfg`
+4. 在游戏目录下，找到目录`config`，再找到里面的`clicktranslate.cfg`(1.0/2.0)或`clicktranslate.yml`(3.0)
 5. 使用文本方式打开并编辑该文件，您必须修改`app_id`为您的`APP ID`，修改`app_secret`为您的`密钥`，其余按需修改
 6. 重启客户端或者在任意地方输入命令`/clicktranslate reload`
 
@@ -46,3 +46,4 @@
 | :-----: | :------: | :-------: |
 |   1.x   |  1.8.9   |   Forge   |
 |   2.x   |  1.12.2  |   Forge   |
+|   3.x   |  1.19.4  |  Fabric   |
