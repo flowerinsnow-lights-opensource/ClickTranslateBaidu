@@ -1,0 +1,42 @@
+{
+    "schemaVersion": 1,
+    "id": "clicktranslate",
+    "version": "${version}",
+    "name": "Click Translate",
+    "description": "Chat GUI click translate",
+    "license": "GPL-3.0",
+    "authors": [
+        "flowerinsnow"
+    ],
+    "contact": {
+        "repo": "https://github.com/flowerinsnow/clicktranslate"
+    },
+    "environment": "client",
+    "entrypoints": {
+        "client": [
+            "online.flowerinsnow.clicktranslate.client.ClickTranslateClient"
+        ],
+        "main": [
+            "online.flowerinsnow.clicktranslate.ClickTranslate"
+        ],
+        "modmenu": [
+            "online.flowerinsnow.clicktranslate.client.modmenu.ClickTranslateModMenu"
+        ]
+    },
+    "mixins": [
+        "clicktranslate.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=${loader_version}",
+        "fabric": "*",
+        "minecraft": "${minecraft_version}"
+    },
+    "custom": {
+        "modmenu": {
+            "links": {
+                "clicktranslate.github": "https://github.com/flowerinsnow-lights-opensource/ClickTranslate"
+            },
+            "badges": []
+        }
+    }
+}
