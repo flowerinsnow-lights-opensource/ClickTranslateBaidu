@@ -1,10 +1,15 @@
 package online.flowerinsnow.clicktranslate.client.listener;
 
+import net.minecraft.client.gui.screen.ChatScreen;
 import net.minecraft.text.*;
 import net.minecraft.util.ActionResult;
+import online.flowerinsnow.clicktranslate.client.ClickTranslateClient;
 import online.flowerinsnow.clicktranslate.client.config.Config;
 import online.flowerinsnow.clicktranslate.client.eci.ChatHudAddMessageCallback;
 import online.flowerinsnow.clicktranslate.client.util.MessageUtils;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 
 public class ChatHudAddMessageListener implements ChatHudAddMessageCallback {
     @Override
@@ -19,15 +24,19 @@ public class ChatHudAddMessageListener implements ChatHudAddMessageCallback {
             if ((index = content.indexOf(Config.SPLIT_CHAR.getNotNull())) != -1) {
                 content = content.substring(index + Config.SPLIT_CHAR.getNotNull().length());
             }
-            mt.append(new LiteralText(MessageUtils.parseColour(Config.TEXT.getNotNull()))
-                    .setStyle(
-                            Style.EMPTY.withClickEvent(
-                                    new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/clicktranslate translate " + content)
-                            ).withHoverEvent(
-                                    new HoverEvent(HoverEvent.Action.SHOW_TEXT, new TranslatableText("clicktranslate.command.clicktranslate.button.hover"))
-                            )
-                    )
-            );
+            try {
+                mt.append(new LiteralText(MessageUtils.parseColour(Config.TEXT.getNotNull()))
+                        .setStyle(
+                                Style.EMPTY.withClickEvent(
+                                        new ClickEvent(ClickEvent.Action.OPEN_URL, ClickTranslateClient.PROTOCOL + URLEncoder.encode(content, "UTF-8"))
+                                ).withHoverEvent(
+                                        new HoverEvent(HoverEvent.Action.SHOW_TEXT, new TranslatableText("clicktranslate.command.clicktranslate.button.hover"))
+                                )
+                        )
+                );
+            } catch (UnsupportedEncodingException e) {
+                throw new RuntimeException();
+            }
         }
         return ActionResult.PASS;
     }

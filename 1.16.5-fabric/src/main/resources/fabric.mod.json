@@ -5,6 +5,7 @@
     "name": "Click Translate",
     "description": "Chat GUI click translate",
     "license": "GPL-3.0",
+    "icon": "assets/clicktranslate/icon.png",
     "authors": [
         "flowerinsnow"
     ],

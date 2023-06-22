@@ -27,7 +27,7 @@ public abstract class TranslateUtils {
     private static final char[] HEX = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
     private static final SecureRandom RANDOM = new SecureRandom();
 
-    public static TranslateResult translate(String message) {
+    public static TranslateResult translate(String message) throws TranslateException {
         TranslateLanguage from = TranslateLanguage.AUTO;
         TranslateLanguage to = TranslateLanguage.getByName(Config.TO_LANGUAGE.getNotNull());
         if (to == null) {

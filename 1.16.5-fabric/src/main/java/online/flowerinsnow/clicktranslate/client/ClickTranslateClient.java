@@ -9,6 +9,8 @@ import online.flowerinsnow.clicktranslate.client.eci.ChatHudAddMessageCallback;
 import online.flowerinsnow.clicktranslate.client.listener.ChatHudAddMessageListener;
 
 public class ClickTranslateClient implements ClientModInitializer {
+    public static final String PROTOCOL = "clicktranslate://";
+
     @Override
     public void onInitializeClient() {
         saveDefaultConfig();
