@@ -49,3 +49,6 @@
 | ~~3.x~~ |  ~~1.19.4~~   | ~~Fabric~~ |
 |   4.x   | 1.19.3~1.20.1 |   Fabric   |
 |   5.x   | 1.16.2~1.16.5 |   Fabric   |
+
+# 使用的类库
+- [EasyConfiguration](https://github.com/CarmJos/EasyConfiguration) by [CarmJos](https://github.com/CarmJos)
