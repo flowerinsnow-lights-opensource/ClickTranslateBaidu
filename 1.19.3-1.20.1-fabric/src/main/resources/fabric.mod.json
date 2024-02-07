@@ -1,41 +1,41 @@
 {
     "schemaVersion": 1,
-    "id": "clicktranslate",
+    "id": "click-translate-baidu",
     "version": "${version}",
-    "name": "Click Translate",
+    "name": "Click Translate Baidu",
     "description": "",
     "authors": [
         "flowerinsnow"
     ],
-    "contact": {
-        "repo": "https://github.com/flowerinsnowdh/clicktranslate",
+	"contact": {
+		"repo": "https://github.com/flowerinsnow-lights-opensource/ClickTranslateBaidu",
         "issues": "https://github.com/flowerinsnow-lights-opensource/HideArmour/issues"
-    },
+	},
     "license": "GPL-3.0",
-    "icon": "assets/clicktranslate/icon.png",
+    "icon": "assets/click-translate-baidu/icon.png",
     "environment": "client",
-    "entrypoints": {
-        "client": [
-            "online.flowerinsnow.clicktranslate.client.ClickTranslateClient"
+	"entrypoints": {
+		"client": [
+			"online.flowerinsnow.clicktranslatebaidu.client.ClickTranslateBaiduClient"
         ],
         "modmenu": [
-            "online.flowerinsnow.clicktranslate.client.modmenu.ModMenuImpl"
+			"online.flowerinsnow.clicktranslatebaidu.client.modmenu.ModMenuImpl"
         ]
-    },
+	},
     "mixins": [
-        "clicktranslate.mixins.json"
+		"click-translate-baidu.mixins.json"
     ],
     "depends": {
         "fabricloader": ">=0.14.10",
-        "fabric": "*",
+        "fabric-api": "*",
         "minecraft": ">=1.19.3 <=1.20.1"
     },
     "custom": {
         "modmenu": {
-            "links": {
-                "modmenu.source": "https://github.com/flowerinsnowdh/clicktranslate",
-                "modmenu.github_releases": "https://github.com/flowerinsnowdh/clicktranslate/releases"
-            }
+			"links": {
+				"modmenu.source": "https://github.com/flowerinsnow-lights-opensource/ClickTranslateBaidu",
+				"modmenu.github_releases": "https://github.com/flowerinsnow-lights-opensource/ClickTranslateBaidu/releases"
+			}
         }
     }
 }

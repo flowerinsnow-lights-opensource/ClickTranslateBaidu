@@ -8,7 +8,7 @@
 		"flowerinsnow"
 	],
 	"contact": {
-		"repo": "https://github.com/flowerinsnowdh/clicktranslate",
+		"repo": "https://github.com/flowerinsnow-lights-opensource/ClickTranslateBaidu",
         "issues": "https://github.com/flowerinsnow-lights-opensource/HideArmour/issues"
 	},
 	"license": "GPL-3.0",
@@ -33,5 +33,13 @@
 	},
 	"suggests": {
 		"modmenu": ">=8.0.0"
+	},
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.source": "https://github.com/flowerinsnow-lights-opensource/ClickTranslateBaidu",
+				"modmenu.github_releases": "https://github.com/flowerinsnow-lights-opensource/ClickTranslateBaidu/releases"
+			}
+		}
 	}
 }
