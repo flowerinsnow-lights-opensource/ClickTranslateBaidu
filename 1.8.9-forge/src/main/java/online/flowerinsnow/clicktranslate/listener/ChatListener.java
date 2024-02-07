@@ -30,7 +30,7 @@ public final class ChatListener {
             ChatComponentText component = new ChatComponentText(MessageUtils.parseColour(Config.propertyText.getString()));
             component.setChatStyle(new ChatStyle()
                     .setChatClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/clicktranslate translate " + message))
-                    .setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ChatComponentTranslation("clicktranslate.command.clicktranslate.button.hover")))
+                    .setChatHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ChatComponentTranslation("click-translate-baidu.command.clicktranslate.button.hover")))
             );
             event.message.appendSibling(component);
         }

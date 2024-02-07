@@ -34,7 +34,7 @@ public abstract class TranslateUtils {
         TranslateLanguage from = TranslateLanguage.AUTO;
         TranslateLanguage to = TranslateLanguage.getByName(Config.propertyToLanguage.getString());
         if (to == null) {
-            throw new TranslateException("clicktranslate.command.error.nosuchtolanguage");
+            throw new TranslateException("click-translate-baidu.command.error.nosuchtolanguage");
         }
         String appid = Config.propertyAppID.getString();
         char[] salt = new char[8];

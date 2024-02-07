@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import online.flowerinsnow.clicktranslate.command.CommandClickTranslate;
+import online.flowerinsnow.clicktranslate.command.CommandClickTranslateBaidu;
 import online.flowerinsnow.clicktranslate.config.Config;
 import online.flowerinsnow.clicktranslate.listener.ChatListener;
 import org.apache.logging.log4j.Logger;
@@ -20,7 +20,7 @@ import org.apache.logging.log4j.Logger;
 )
 @SideOnly(Side.CLIENT)
 public class ClickTranslate {
-    public static final String MODID = "clicktranslate";
+    public static final String MODID = "click-translate-baidu";
     public static final String VERSION = "@VERSION@";
 
     private static Logger logger;
@@ -33,7 +33,7 @@ public class ClickTranslate {
     
     @EventHandler
     public void init(FMLInitializationEvent event) {
-        ClientCommandHandler.instance.registerCommand(new CommandClickTranslate());
+        ClientCommandHandler.instance.registerCommand(new CommandClickTranslateBaidu());
         MinecraftForge.EVENT_BUS.register(new ChatListener());
     }
 
