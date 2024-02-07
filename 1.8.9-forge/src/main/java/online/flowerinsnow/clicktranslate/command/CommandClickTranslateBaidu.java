@@ -20,15 +20,16 @@ import java.util.Arrays;
 import java.util.List;
 
 @SideOnly(Side.CLIENT)
-public class CommandClickTranslate extends CommandBase {
+public class CommandClickTranslateBaidu extends CommandBase {
+    public static final String COMMAND_NAME = "clicktranslate";
     @Override
     public String getCommandName() {
-        return "clicktranslate";
+        return COMMAND_NAME;
     }
 
     @Override
     public String getCommandUsage(ICommandSender sender) {
-        return "clicktranslate.command.clicktranslate.usage";
+        return "click-translate-baidu.command.clicktranslate.usage";
     }
 
     @Override
@@ -40,7 +41,7 @@ public class CommandClickTranslate extends CommandBase {
     public void processCommand(ICommandSender sender, String[] args) throws CommandException {
         if (args.length == 1 && "reload".equalsIgnoreCase(args[0])) {
             Config.reload();
-            sender.addChatMessage(new ChatComponentTranslation("clicktranslate.command.clicktranslate.reload"));
+            sender.addChatMessage(new ChatComponentTranslation("click-translate-baidu.command.clicktranslate.reload"));
             return;
         } else if (args.length > 1 && "translate".equalsIgnoreCase(args[0])) {
             StringBuilder sb = new StringBuilder();
@@ -53,9 +54,9 @@ public class CommandClickTranslate extends CommandBase {
             new Thread(() -> {
                 try {
                     TranslateResult result = TranslateUtils.translate(sb.toString());
-                    sender.addChatMessage(new ChatComponentTranslation("clicktranslate.translate.response", I18n.format("clicktranslate.translate.language." + result.getFrom().name), result.getDst()));
+                    sender.addChatMessage(new ChatComponentTranslation("click-translate-baidu.translate.response", I18n.format("click-translate-baidu.translate.language." + result.getFrom().name), result.getDst()));
                 } catch (TranslateException e) {
-                    sender.addChatMessage(new ChatComponentTranslation("clicktranslate.command.error.prefix", I18n.format(e.getMessage())));
+                    sender.addChatMessage(new ChatComponentTranslation("click-translate-baidu.command.error.prefix", I18n.format(e.getMessage())));
                 }
             }).start();
             return;

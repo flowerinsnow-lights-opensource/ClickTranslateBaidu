@@ -30,13 +30,13 @@ public abstract class Config {
     public static void reload() {
         configuration.load();
         final String categoryGeneral = "general";
-        propertyEnable = configuration.get(categoryGeneral, "enable", true, "是否启用功能");
-        propertyText = configuration.get(categoryGeneral, "text", "&a [翻译]", "显示的按钮");
-        propertySplitChar = configuration.get(categoryGeneral, "split_char", ":", "分割符，截取第一个分隔符后面的文本进行翻译");
-        propertyAPI = configuration.get(categoryGeneral, "api", "https://fanyi-api.baidu.com/api/trans/vip/translate", "API地址，不懂不要修改");
-        propertyAppID = configuration.get(categoryGeneral, "app_id", "未填写", "前往 https://fanyi-api.baidu.com/manage/developer 获取");
-        propertyAppSecret = configuration.get(categoryGeneral, "app_secret", "未填写", "前往 https://fanyi-api.baidu.com/manage/developer 获取");
-        propertyToLanguage = configuration.get(categoryGeneral, "to_language", "zh", "翻译目标语言代码，前往 https://fanyi-api.baidu.com/doc/21 查看所有语言代码");
+        propertyEnable = configuration.get(categoryGeneral, "enable", true, "Enable or not");
+        propertyText = configuration.get(categoryGeneral, "text", "&a [T]", "Text of translate button");
+        propertySplitChar = configuration.get(categoryGeneral, "split_char", ":", "Split char, substring message from the first split char");
+        propertyAPI = configuration.get(categoryGeneral, "api", "https://fanyi-api.baidu.com/api/trans/vip/translate", "API Address");
+        propertyAppID = configuration.get(categoryGeneral, "app_id", "unfilled", "Obtain from https://fanyi-api.baidu.com/manage/developer . If it is a pure number, you need to add English double quotes");
+        propertyAppSecret = configuration.get(categoryGeneral, "app_secret", "unfilled", "Obtain from https://fanyi-api.baidu.com/manage/developer .");
+        propertyToLanguage = configuration.get(categoryGeneral, "to_language", "zh", "Code of target language，View full codes from https://fanyi-api.baidu.com/doc/21 .");
     }
 
     public static void save() {

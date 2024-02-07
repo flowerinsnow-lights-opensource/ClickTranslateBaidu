@@ -6,10 +6,10 @@
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "https://github.com/flowerinsnowdh/ClickTranslate",
-  "updateUrl": "",
+  "updateUrl": "Click chat message to translate with baidu translate API.",
   "authorList": ["flowerinsnow"],
   "credits": "",
-  "logoFile": "",
+  "logoFile": "assets/click-translate-baidu/icon.png",
   "screenshots": [],
   "dependencies": []
 }
