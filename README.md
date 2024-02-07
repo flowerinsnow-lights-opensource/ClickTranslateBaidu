@@ -16,7 +16,7 @@ This project does not involve the author's server. The client communicates direc
 This project uses the GPL 3.0 open source license but adds additional terms. This software requires you to mark "This software is not the original version" in the software when modifying and redistributing it, and attach the original version's repository link (i.e. this repository); details See [LICENSE](LICENSE) file
 
 # Usage
-1. This project requires you to apply for the Baidu Translation API yourself. Generally, you only need a Baidu account. Please go to [百度翻译开放平台] (https://fanyi-api.baidu.com/) to apply. You can upgrade to a higher version if necessary.
+1. This project requires you to apply for the Baidu Translation API yourself. Generally, you only need a Baidu account. Please go to [百度翻译开放平台](https://fanyi-api.baidu.com/) to apply. You can upgrade to a higher version if necessary.
 2. Check your `APP ID` and `Key`, they are in [开发者中心](https://fanyi-api.baidu.com/manage/developer)
 3. Download the mod file to the `mods` folder, then launch the game
 4. In the game directory, find the directory `config`, and then find `clicktranslate.cfg` or `clicktranslate.yml`
