@@ -15,30 +15,34 @@ import online.flowerinsnow.clicktranslate.config.Config;
 import online.flowerinsnow.clicktranslate.exception.TranslateException;
 import online.flowerinsnow.clicktranslate.object.TranslateResult;
 import online.flowerinsnow.clicktranslate.util.TranslateUtils;
-import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
+@SuppressWarnings("NullableProblems")
 @SideOnly(Side.CLIENT)
-public class CommandClickTranslate extends CommandBase {
+public class CommandClickTranslateBaidu extends CommandBase {
+    public static final String COMMAND_NAME = "clicktranslate";
+
     @Override
-    public @NotNull String getName() {
-        return "clicktranslate";
+    public String getName() {
+        return COMMAND_NAME;
     }
 
     @Override
-    public @NotNull String getUsage(@NotNull ICommandSender sender) {
-        return "clicktranslate.command.clicktranslate.usage";
+    public String getUsage(ICommandSender iCommandSender) {
+        return "click-translate-baidu.command.clicktranslate.usage";
     }
 
     @Override
-    public void execute(@NotNull MinecraftServer server, @NotNull ICommandSender sender, String[] args) throws CommandException {
+    public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException {
         if (args.length == 1 && "reload".equalsIgnoreCase(args[0])) {
             Config.reload();
-            sender.sendMessage(new TextComponentTranslation("clicktranslate.command.clicktranslate.reload"));
+            sender.sendMessage(new TextComponentTranslation("click-translate-baidu.command.clicktranslate.reload"));
             return;
         } else if (args.length > 1 && "translate".equalsIgnoreCase(args[0])) {
             StringBuilder sb = new StringBuilder();
@@ -51,9 +55,9 @@ public class CommandClickTranslate extends CommandBase {
             new Thread(() -> {
                 try {
                     TranslateResult result = TranslateUtils.translate(sb.toString());
-                    sender.sendMessage(new TextComponentTranslation("clicktranslate.translate.response", I18n.format("clicktranslate.translate.language." + result.getFrom().name), result.getDst()));
+                    sender.sendMessage(new TextComponentTranslation("click-translate-baidu.translate.response", I18n.format("click-translate-baidu.translate.language." + result.getFrom().name), result.getDst()));
                 } catch (TranslateException e) {
-                    sender.sendMessage(new TextComponentTranslation("clicktranslate.command.error.prefix", I18n.format(e.getMessage())));
+                    sender.sendMessage(new TextComponentTranslation("click-translate-baidu.command.error.prefix", I18n.format(e.getMessage())));
                 }
             }).start();
             return;
@@ -62,17 +66,17 @@ public class CommandClickTranslate extends CommandBase {
     }
 
     @Override
-    public boolean checkPermission(@NotNull MinecraftServer server, ICommandSender sender) {
+    public boolean checkPermission(MinecraftServer server, ICommandSender sender) {
         return sender.equals(Minecraft.getMinecraft().player);
     }
 
     @Override
-    public @NotNull List<String> getTabCompletions(@NotNull MinecraftServer server, @NotNull ICommandSender sender, String[] args, @Nullable BlockPos targetPos) {
+    public List<String> getTabCompletions(MinecraftServer server, ICommandSender sender, String[] args, @Nullable BlockPos targetPos) {
         if (args.length == 1) {
-            List<String> subCommands = new ArrayList<>(Arrays.asList("reload", "translate"));
-            subCommands.removeIf(s -> !s.toLowerCase().startsWith(args[0].toLowerCase()));
-            return subCommands;
+            return Stream.of("reload", "translate")
+                    .filter(s -> s.toLowerCase(Locale.ROOT).startsWith(args[0].toLowerCase(Locale.ROOT)))
+                    .collect(Collectors.toList());
         }
-        return new ArrayList<>();
+        return Collections.emptyList();
     }
 }

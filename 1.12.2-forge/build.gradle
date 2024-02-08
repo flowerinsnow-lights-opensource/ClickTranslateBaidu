@@ -17,7 +17,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '2.0'
+version = '2.1.0'
 group = 'online.flowerinsnow' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'clicktranslate'
 
@@ -68,7 +68,6 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2859'
-    compileOnly 'org.jetbrains:annotations:24.0.1'
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
@@ -92,6 +91,7 @@ dependencies {
 
 // Example for how to get properties into the manifest for reading by the runtime..
 jar {
+    from 'LICENSE'
     manifest {
         attributes([
             "Specification-Title": "examplemod",

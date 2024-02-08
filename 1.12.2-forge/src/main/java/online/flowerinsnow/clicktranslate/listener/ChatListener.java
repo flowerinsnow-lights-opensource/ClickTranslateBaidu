@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import online.flowerinsnow.clicktranslate.command.CommandClickTranslateBaidu;
 import online.flowerinsnow.clicktranslate.config.Config;
 import online.flowerinsnow.clicktranslate.util.MessageUtils;
 
@@ -30,8 +31,8 @@ public final class ChatListener {
             }
             TextComponentString component = new TextComponentString(MessageUtils.parseColour(Config.propertyText.getString()));
             component.setStyle(new Style()
-                    .setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/clicktranslate translate " + message))
-                    .setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new TextComponentTranslation("clicktranslate.command.clicktranslate.button.hover")))
+                    .setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/" + CommandClickTranslateBaidu.COMMAND_NAME + " translate " + message))
+                    .setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new TextComponentTranslation("click-translate-baidu.command.clicktranslate.button.hover")))
             );
             event.getMessage().appendSibling(component);
         }

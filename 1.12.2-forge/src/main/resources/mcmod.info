@@ -1,16 +1,18 @@
 [
-{
-  "modid": "clicktranslate",
-  "name": "Click Translate",
-  "description": "",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["flowerinsnow"],
-  "credits": "https://github.com/flowerinsnow-lights-opensource/ClickTranslate",
-  "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
-}
+    {
+        "modid": "click-translate-baidu",
+        "name": "Click Translate Baidu",
+        "description": "Click on the chat message to translate it using Baidu Translation API.",
+        "version": "${version}",
+        "mcversion": "${mcversion}",
+        "url": "https://github.com/flowerinsnow-lights-opensource/ClickTranslateBaidu",
+        "updateUrl": "",
+        "authorList": [
+            "flowerinsnow"
+        ],
+        "credits": "https://github.com/flowerinsnow-lights-opensource/ClickTranslate",
+        "logoFile": "",
+        "screenshots": [],
+        "dependencies": []
+    }
 ]

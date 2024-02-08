@@ -211,5 +211,5 @@
   "click-translate-baidu.configuration.reload.button": "Reload",
   "click-translate-baidu.configuration.reload.success": "Reload successful",
   "click-translate-baidu.configuration.done": "Done",
-  "modmenu.descriptionTranslation.click-translate-baidu": "Click chat message to translate with baidu translate API."
+  "modmenu.descriptionTranslation.click-translate-baidu": "Click on the chat message to translate it using Baidu Translation API."
 }

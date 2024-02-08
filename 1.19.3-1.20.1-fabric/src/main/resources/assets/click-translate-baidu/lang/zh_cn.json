@@ -211,5 +211,5 @@
     "click-translate-baidu.configuration.reload.button": "重新加载",
     "click-translate-baidu.configuration.reload.success": "重新加载成功",
     "click-translate-baidu.configuration.done": "完成",
-    "modmenu.descriptionTranslation.click-translate-baidu": "点击聊天消息即可使用百度翻译API进行翻译。"
+    "modmenu.descriptionTranslation.click-translate-baidu": "点击聊天消息即可使用百度翻译 API 进行翻译"
 }

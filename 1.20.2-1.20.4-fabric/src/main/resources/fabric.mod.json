@@ -3,7 +3,7 @@
 	"id": "click-translate-baidu",
 	"version": "${version}",
 	"name": "Click Translate Baidu",
-	"description": "Click chat message to translate with baidu translate API.",
+	"description": "Click on the chat message to translate it using Baidu Translation API.",
 	"authors": [
 		"flowerinsnow"
 	],
