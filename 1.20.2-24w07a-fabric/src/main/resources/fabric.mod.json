@@ -8,8 +8,9 @@
 		"flowerinsnow"
 	],
 	"contact": {
-		"repo": "https://github.com/flowerinsnow-lights-opensource/ClickTranslateBaidu",
-        "issues": "https://github.com/flowerinsnow-lights-opensource/HideArmour/issues"
+		"homepage": "https://modrinth.com/mod/click-translate-baidu",
+        "issues": "https://github.com/flowerinsnow-lights-opensource/HideArmour/issues",
+		"sources": "https://github.com/flowerinsnow-lights-opensource/ClickTranslateBaidu"
 	},
 	"license": "GPL-3.0",
 	"icon": "assets/click-translate-baidu/icon.png",
@@ -27,7 +28,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.14.22",
-		"minecraft": ">=1.20.2 <=1.20.4",
+		"minecraft": ">=1.20.2 <1.20.5",
 		"java": ">=17",
 		"fabric-api": ">=0.89.0"
 	},
@@ -37,7 +38,6 @@
 	"custom": {
 		"modmenu": {
 			"links": {
-				"modmenu.source": "https://github.com/flowerinsnow-lights-opensource/ClickTranslateBaidu",
 				"modmenu.github_releases": "https://github.com/flowerinsnow-lights-opensource/ClickTranslateBaidu/releases"
 			}
 		}
