@@ -42,8 +42,8 @@ public class GuiConfiguration extends Screen {
 
     @Override
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
+        this.renderBackground(context, mouseX, mouseY, delta);
         MutableText title = Text.translatable("click-translate-baidu.configuration.title");
-        this.renderBackgroundTexture(context);
         context.drawTextWithShadow(this.textRenderer, title, this.width / 2 - this.textRenderer.getWidth(title) / 2, 10, 0xFFFFFF);
         super.render(context, mouseX, mouseY, delta);
     }
